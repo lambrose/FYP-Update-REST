@@ -2,8 +2,8 @@ from flask_restful import fields, reqparse, Resource
 from app.service.user_service import verify_user, email
 
 parser = reqparse.RequestParser()
-parser.add_argument('email', dest='email', type=email, location='form', required=True, help='valid email is required')
-parser.add_argument('password', dest='password', location='form', required=True, help='password is required')
+parser.add_argument('email', dest='email', type=email, location='form', required=True, help='Valid email is required')
+parser.add_argument('password', dest='password', location='form', required=True, help='Password is required')
 
 user_fields = {
     'email': fields.String,

@@ -16,6 +16,9 @@ def create_app(config_name=Config):
 
     from app.controller.register_controller import Register
     from app.controller.login_controller import Login
+    from app.controller.watch_controller import Watch
+    from app.controller.search_controller import Search
+    from app.controller.genre_controller import Genre
 
     app.config.from_object(Config)
     db.init_app(app)
@@ -23,6 +26,9 @@ def create_app(config_name=Config):
 
     api.add_resource(Register, '/register')
     api.add_resource(Login, '/login')
+    api.add_resource(Watch, '/watch')
+    api.add_resource(Search, '/search')
+    api.add_resource(Genre, '/genre')
     app.register_blueprint(api_bp)
 
     return app

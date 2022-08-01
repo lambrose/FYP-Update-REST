@@ -23,4 +23,4 @@ class User(db.Model):
         return flask_bcrypt.check_password_hash(self.password_hash, password)
 
     def __repr__(self):
-        return f"Users('{self.user_id}', '{self.first_name}', '{self.last_name}', '{self.email}')"
+        return f"user('{self.user_id}', '{self.first_name}', '{self.last_name}', '{self.email}')"
