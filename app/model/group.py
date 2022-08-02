@@ -16,6 +16,7 @@ class Group(db.Model):
     plurality_voting = db.Column(db.Integer, nullable=True)
     borda_count = db.Column(db.Integer, nullable=True)
     publish_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    # Create a foreign key to the user table i.e. user_id
 
     def __repr__(self):
         return f"group('{self.id}', '{self.winner}', '{self.additive}', '{self.multiplicative}'," \

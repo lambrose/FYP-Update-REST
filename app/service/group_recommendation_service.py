@@ -47,12 +47,12 @@ def execute_algorithms(data):
 
     format_algorithm_results(algos, get_winner(record))
 
-    # save_changes(algos)
+    # save_result(algos)
 
     return algos, 200
 
 
-def save_changes(data):
+def save_result(data):
     for winner in data['winner']:
         group = Group(winner=winner, multiplicative_utilitarian=data['multiplicative_utilitarian'],
                       additive_utilitarian=data['additive_utilitarian'], approval_voting=data['approval_voting'],
